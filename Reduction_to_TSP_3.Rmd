@@ -1,0 +1,65 @@
+
+
+```{r}
+# https://www.rdocumentation.org/packages/TSP/versions/1.1-9/topics/TSPLIB
+setwd("E:/RA/Pablo Moscato/Code/R Code")
+
+# rm(list=ls()) #Code to clear all variables
+
+library("TSP")
+# install.packages("igraph")
+# library("shp2graph")
+# library("igraph")
+# library("Rcpp")
+
+concordePath = "E:/RA/Pablo Moscato/Concorde_Code/"
+concorde_path(concordePath)
+concorde_help()
+
+# dataset_path = "E:/RA/Pablo Moscato/dataset/TSPLIB95/hcp/"
+# dataset = read.table(paste(dataset_path,"alb1000.txt",sep = ""))
+
+# dataset_path = "E:/RA/Pablo Moscato/dataset/Hougardy_Zhong_generated/"
+# name = "Tnm52.txt"
+dataset_path = "E:/RA/Pablo Moscato/dataset/FHCPCS/"
+name = "graph1.txt"
+dataset = read.table(paste(dataset_path,name,sep = ""))
+
+tsp <- TSP(dist(dataset))
+
+tour_test <- solve_TSP(tsp, method = "concorde")
+tour_test
+
+plot(tour_test, cex=.6, col = "red", pch= 3, main = "Test")
+
+# arr=dataset
+# nodelist = unique(as.vector(as.matrix(arr)))
+# arr_mat = matrix(0,length(nodelist),length(nodelist))
+# for (i in 1:length(arr[,1])){
+#   arr_mat[arr[i,1],arr[i,2]] = 1
+#   # arr_mat[arr[i,2],arr[i,1]] = 1
+# }
+# arr_mat_new = arr_mat
+# for(i in 1:length(arr_mat[,1])){
+#   arr_mat_new[i,which(arr_mat[i,]==0)] = 2
+# }
+# 
+# dist_mat = dist(arr_mat_new)
+# distances <- dist_mat
+# 
+# path_Tnm_instances = "E:/RA/Pablo Moscato/dataset/Tnm_instances/"
+# file1 = "Tnm52.tsp"
+# file = paste(path_Tnm_instances,file1,sep="")
+# net1 <- read_TSPLIB(file, precision = 0)
+# 
+# # Run the TSP
+# distances <- as.dist(distances)
+# tsp_test <- TSP(floor(distances))
+
+tour_test <- solve_TSP(tsp_test, method = "concorde")
+tour_test
+
+plot(tour_test, cex=.6, col = "red", pch= 3, main = "Test")
+```
+
+
