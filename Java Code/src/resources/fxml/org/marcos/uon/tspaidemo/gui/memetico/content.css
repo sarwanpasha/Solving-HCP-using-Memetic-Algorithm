@@ -1,0 +1,86 @@
+#infoBox {
+    -fx-padding: 5px;
+}
+.dot {
+    -fx-fill:red;
+}
+.scroll-pane {
+    -fx-background-color:transparent;
+}
+
+#tfProblemName {
+    -fx-alignment: center;
+    -fx-padding: 0 0 0.5em 0;
+}
+
+.line {
+    -fx-stroke: white;
+}
+/* note that tour edges created using the TourEdge class, the css class .tour is used instead */
+.prediction .line {
+    -fx-stroke: black;
+}
+
+.target .line {
+    -fx-stroke: lime;
+}
+
+#graphWrapper {
+    -fx-padding: 1em;
+}
+
+.graph .label {
+    -fx-color: #cecece;
+    visibility:hidden;
+}
+
+.agentDisplayTitle {
+    -fx-font-weight:bold;
+
+    -fx-font-size: 1.15em;
+    -fx-padding: 0.15em 0 0.15em 0;
+}
+
+/*.lblAgentId, .txtAgentId {
+    -fx-font-weight:bold;
+}*/
+
+.dataGrid {
+    -fx-hgap: 5px;
+    -fx-vgap: 5px;
+}
+
+.metaGrid {
+   -fx-vgap: 5px;
+}
+
+.statisticsBox > * {
+    -fx-padding: 5px 0 5px 0;
+}
+
+#agentsGrid {
+    -fx-padding: 5px 0 0 0;
+    -fx-vgap: 5px;
+}
+
+.colorLabel {
+   -fx-min-width:9px;
+}
+
+.colorPadding {
+    -fx-min-width: 5px;
+}
+
+.successStatus {
+    -fx-fill: lime;
+}
+.failStatus {
+    -fx-fill: red;
+}
+.successStatus, .failedStatus {
+    -fx-font-weight: bold;
+}
+
+.spaced {
+    -fx-spacing: 5px;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<fx:root type="Pane" xmlns:fx="http://javafx.com/fxml">
+    <GridPane styleClass="dataGrid">
+        <TextFlow GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="3" styleClass="agentDisplayTitle">
+            <Text styleClass="lblAgentId">Agent&#160;</Text>
+            <Text styleClass="txtAgentId"/>
+        </TextFlow>
+        <Label GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="colorLabel,pocketColorSample">&#160;</Label>
+        <TextFlow GridPane.rowIndex="1" GridPane.columnIndex="1">
+            <Text>Pocket:</Text>
+        </TextFlow>
+        <TextFlow GridPane.rowIndex="1" GridPane.columnIndex="2">
+            <Text styleClass="txtPocketCost" textAlignment="RIGHT"/>
+        </TextFlow>
+        <Label GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="colorLabel,currentColorSample,color">&#160;</Label>
+        <TextFlow GridPane.rowIndex="2" GridPane.columnIndex="1">
+            <Text>Current:</Text>
+        </TextFlow>
+        <TextFlow GridPane.rowIndex="2" GridPane.columnIndex="2">
+            <Text styleClass="txtCurrentCost" textAlignment="RIGHT"/>
+        </TextFlow>
+    </GridPane>
+</fx:root>
